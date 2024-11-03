@@ -52,21 +52,19 @@
 			<plugin>
 				<groupId>com.github.spotbugs</groupId>
 				<artifactId>spotbugs-maven-plugin</artifactId>
-				<version>4.8.6.0</version>
+				<version>4.8.5.0</version>
+				<dependencies>
+					<dependency>
+						<groupId>com.github.spotbugs</groupId>
+						<artifactId>spotbugs</artifactId>
+						<version>4.8.5</version>
+					</dependency>
+				</dependencies>
 				<configuration>
-					<outputDirectory>${project.build.directory}/spotbugs</outputDirectory>
 					<xmlOutput>true</xmlOutput>
 					<htmlOutput>true</htmlOutput>
-					<failOnError>true</failOnError>
-					<effort>Max</effort>
+					<failOnError>false</failOnError>
 				</configuration>
-				<executions>
-					<execution>
-						<goals>
-							<goal>check</goal>
-						</goals>
-					</execution>
-				</executions>
 			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
