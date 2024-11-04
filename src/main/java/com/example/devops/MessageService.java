@@ -6,9 +6,6 @@ import org.springframework.stereotype.Service;
 public class MessageService {
 
     public String toLowercase(String message) {
-        if (message == null) {
-            return message.toLowerCase();
-        }
         return message.toLowerCase();
     }
 }
