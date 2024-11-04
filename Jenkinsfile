@@ -6,9 +6,21 @@ pipeline {
     }
 
     stages {
+        stage('Prebuild') {
+            steps {
+                sh 'mvn clean'
+            }
+        }
+
         stage('Build') {
             steps {
-                sh 'mvn -B clean package'
+                sh 'mvn package'
+            }
+        }
+
+        stage('Analysis') {
+            steps {
+                sh 'mvn spotbugs:check'
             }
         }
     }
