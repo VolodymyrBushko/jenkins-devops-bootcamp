@@ -3,7 +3,6 @@ pipeline {
 
     tools {
         maven '3.9.9'
-        jdk 'JDK 23'
     }
 
     stages {
@@ -11,7 +10,7 @@ pipeline {
             steps {
             sh 'mvn --version'
             sh 'java --version'
-//                 sh 'mvn -B -DskipTests clean package'
+            // sh 'mvn -B -DskipTests clean package'
             }
         }
     }
