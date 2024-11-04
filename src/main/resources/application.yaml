@@ -1,5 +1,5 @@
 spring:
   application:
     name: devops
-server:
+server
   port: 9090
